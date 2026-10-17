@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.screencontainer}>
       <View style={styles.imgview}>
         <Image
-          source={require('./assets/movie.jpg')}
+          source={require('./assets/movies.jpg')}
           style={styles.img}
           resizeMode="contain"
         />
@@ -43,4 +43,3 @@ const styles = StyleSheet.create({
     padding: '10%',
   },
 });
-

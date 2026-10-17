@@ -1,4 +1,4 @@
-import {Text, SafeAreaView, TextInput, StyleSheet, View, Switch, Button, TouchableOpacity} from 'react-native';
+import {Text, SafeAreaView, TextInput, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
 import DatePicker from '../components/DatePicker';
@@ -8,14 +8,7 @@ import { useState } from 'react';
 export default function MovieBooking({ screenstyle }) {
   const [movieChoice, setMovieChoice] = useState("");
   const [totalTickets, setTotaltickets] = useState(1);
-  const [balcony, setBalcony] = useState(false);
   const [movieDate, setMoviedate] = useState(new Date());
-
-  const [movieList, setMovieList] = useState([
-    { id: 1, title: 'Kneecap', age: 16 },
-    { id: 2, title: 'Joker, Folie a Deux', age: 18 },
-    { id: 3, title: 'Deadpool and Wolverine', age: 12 },
-  ]);
 
   return (
     <View style={screenstyle}>
@@ -25,13 +18,8 @@ export default function MovieBooking({ screenstyle }) {
         style={styles.textbox}
         selectedValue={movieChoice}
         onValueChange={(itemValue) => setMovieChoice(itemValue)}>
-        {movieList.map((movie) => (
-          <Picker.Item
-            key={movie.id}
-            label={movie.title}
-            value={movie.title}
-          />
-        ))}
+        <Picker.Item label="Kneecap" value="Kneecap" />
+        <Picker.Item label="Joker, Folie a Deux" value="Joker, Folie a Deux" />
       </Picker>
 
       <DatePicker
@@ -55,10 +43,7 @@ export default function MovieBooking({ screenstyle }) {
       <Text style={styles.label}>Balcony</Text>
 
       <View style={{ alignItems: "flex-start", flexDirection: "row" }}>
-        <Switch
-          value={balcony}
-          onValueChange={setBalcony}
-        />
+        {/* Part 3: add the Balcony Switch here. */}
       </View>
     </View>
   );
