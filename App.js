@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.screencontainer}>
       <View style={styles.imgview}>
         <Image
-          source={require('./assets/movies.jpg')}
+          source={require('./assets/movie.jpg')}
           style={styles.img}
           resizeMode="contain"
         />
